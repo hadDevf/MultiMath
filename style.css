@@ -1,0 +1,595 @@
+.container {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: all .3s ease;
+  font-family: Segoe UI;
+  font-weight: bold;
+}
+body {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  transition: all .3s ease;
+  font-family: Segoe UI;
+  font-weight: bold;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(4px);
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  margin: 5px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: 1.2px solid white;
+  font-weight: bold;
+  backdrop-filter: blur(7px);
+}
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: transparent;
+  margin: 7px;
+  width: 100%;
+  position: relative;
+  backdrop-filter: blur(5px);
+  color: white;
+  font-family: Segoe UI;
+  font-weight: bold;
+  overflow-x: auto;
+}
+#search {
+  width: 95%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 40px;
+  position: sticky;
+  top: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  backdrop-filter: blur(50px);
+  z-index: 2;
+}
+#search:focus {
+  outline: none;
+  box-shadow: 0 0 6px white, inset 0 0 5px white;
+}
+#search::placeholder {
+  opacity: 0.7;
+}
+input::placeholder {
+  color: white;
+  font-family: Segoe UI;
+  font-weight: bold;
+}
+input:focus {
+  outline: none;
+}
+input p {
+  display: flex;
+  font-family: Segoe UI;
+  font-weight: bold;
+}
+.judul {
+  font-family: Segoe UI;
+  top: 0;
+  position: static;
+  display: flex;
+}
+.strt {
+  width: 85%;
+  padding: 20px;
+  padding-bottom: 0;
+  margin-top: 40px;
+  border-radius: 15px;
+  border: 1.2px solid white;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Segoe UI;
+  box-shadow: 3px 3px 8px black;
+  backdrop-filter: blur(7px);
+  animation: munculAtas 1s ease;
+  transition: all .3s ease;
+}
+.src {
+  width: 85%;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 15px;
+  border: 1.2px solid white;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 15px;
+  background: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Segoe UI;
+  box-shadow: 3px 3px 8px black;
+  backdrop-filter: blur(7px);
+  animation: munculAtas 1s ease;
+  transition: all .3s ease;
+  z-index: 2;
+}
+.strt1 {
+  width: 85%;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 15px;
+  border: 1.2px solid white;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Segoe UI;
+  box-shadow: 3px 3px 8px black;
+  backdrop-filter: blur(7px);
+  animation: munculAtas 1s ease;
+  transition: all .3s ease;
+}
+.strt p {
+  margin-top: -10px;
+  font-weight: bold;
+}
+.strt h1 {
+  color: white;
+}
+.strt1 p {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.strt1 h1 {
+  color: white;
+}
+.tosca {
+  color: #00ffff;
+}
+.card {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  border: 1.2px solid white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 8px black;
+  backdrop-filter: blur(7px);
+  animation: munculBawah 1s ease;
+  transition: all .3s ease;
+}
+.card h2 {
+  display: flex;
+  font-size: 20px;
+}
+#tutupp {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutuppp {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupk {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupLuasLing {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupbalok {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupbola {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupluassegitiga {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupKelilingPersegi {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupKelilingPersegiPanjang {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupKelilingSegitiga {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupKelilingLingkaran {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupAkar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupTabung {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#tutupPecahan {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#mulaip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaipp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaik {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiLuasLing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaibalok {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaibola {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulailuassegitiga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiKelilingPersegi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiKelilingPersegiPanjang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiKelilingSegitiga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiKelilingLingkaran {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiAkar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiTabung {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mulaiPecahan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noteMath {
+  font-weight: bold;
+  font-family: Segoe UI;
+  font-size: 17px;
+  margin-top: -15px;
+}
+.hitung {
+  width: 90%;
+  padding: 10px;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Segoe UI;
+  font-weight: bold;
+  line-height: 1px;
+  border-radius: 15px;
+  display: none;
+  position: relative;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  border: 1.2px solid white;
+  animation: muncul .5s ease;
+}
+.hitung1 {
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hitung1 p {
+  display: flex;
+  font-family: Segoe UI;
+  font-weight: bold;
+  z-index: 1;
+}
+.hitung p {
+  display: flex;
+  font-family: Segoe UI;
+  font-weight: bold;
+  z-index: 1;
+}
+.hasil p {
+  display: flex;
+  font-weight: bold;
+}
+#console {
+  height: 10px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1.5px solid black;
+  color: black;
+  gap: 5px;
+}
+.hasil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+#persegi {
+  display: none;
+}
+#persegipanjang {
+  display: none;
+}
+#kubus {
+  display: none;
+}
+@keyframes muncul {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes munculBawah {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes munculAtas {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+select {
+  width: 45%;
+  height: 30px;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+select:focus {
+  outline: none;
+}
+option {
+  font-family: Segoe UI;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.pilihUkuran {
+  margin: 20px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 1px;
+}
+.pilihUkuran p {
+  font-family: Segoe UI;
+  font-weight: bold;
+}
+.lihatUkuran {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 3px;
+}
+sup {
+  font-weight: bold;
+  font-size: 11px;
+}
+#hitungluas {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#hitungvolume {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.hitungluas, .hitungvolume {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.btnmore {
+  border: 1.2px solid white;
+  border-radius: 50%;
+}
+.btnmore:hover {
+  transition: all .3s ease;
+  box-shadow: 0 0 15px white;
+  cursor: pointer;
+}
+.ukuranPhi {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 3px;
+}
+.ukuranPhi p {
+  font-family: Segoe UI;
+  font-weight: bold;
+  display: flex;
+  text-align: start;
+}
+.pilihanPhi {
+  width: 45%;
+  display: flex;
+  border: none;
+}
+.hitung2 {
+  display: flex;
+  width: 80%;
+  border: none;
+  justify-content: end;
+  align-items: center;
+}
+.laptop {
+  display: none;
+  flex-direction: column;
+}
+@media (min-width: 1000px) {
+  .container {
+    display: none;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .laptop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    padding: 50px;
+    margin: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2.5px solid white;
+  }
+  .card h1 {
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .card p {
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+.pecahan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright {
+  font-weight: bold;
+  font-family: Segoe UI;
+  font-size: 13px;
+  color: white;
+}

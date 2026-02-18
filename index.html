@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MultiMath</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+  <script src="script.js"></script>
+</head>
+<body>
+  <img src="bg.jpeg" class="bg">
+  <div class="container">
+    <div class="strt1">
+      <h2>Multi<span class="tosca">Math</span></h2>
+      <p class="noteMath">MultiMath adalah tool/alat matematika multifungsi untuk membantu user menghitung</p>
+      <p>Made by : HadDev</p>
+    </div>
+      <input type="search" id="search" placeholder="Klik Aku Dan Cari Tool/Alat Matematika" onkeyup="filterCards()">
+    <div class="strt ukuran">
+      <div class="pilihUkuran">
+        <p>Pilih Ukuran Satuan : </p>
+        <select name="ukuran" id="ukuran">
+          <option value="km">Kilometer</option>
+          <option value="hm">Hektometer</option>
+          <option value="dam">Dekameter</option>
+          <option value="m">Meter</option>
+          <option value="dm">Decimeter</option>
+          <option value="cm" selected>Centimeter (default)</option>
+          <option value="mm">Milimeter</option>
+        </select>
+      </div>
+      <div class="pilihUkuran">
+        <p>Bulatkan hasil berkoma : </p>
+        <select name="ukuran" id="bulatkan">
+          <option value="ya">Ya</option>
+          <option value="tidak" selected>Tidak (default)</option>
+          <option disabled>Note : Jika anda memilih opsi "Ya", opsi tersebut hanya berpengaruh di beberapa tool saja. Dikarenakan tidak semua hasil dari matematika bisa dibulatkan !!</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="card">
+      <h2>Luas Persegi</h2>
+      <button id="mulaip" class="btnmore" onclick="bukapersegi()">⋁</button>
+      <button id="tutupp" class="btnmore" onclick="tutuppersegi()">⋀</button>
+    </div>
+    <div class="hitung" id="persegi">
+      <div class="hitung1">
+      <p>Sisi :</p>
+      <div class="hitung2">
+        <input type="number" id="sisi1p" placeholder="Masukan nilai sisi (s)">
+        <div id="console">
+        <p id="consoleSatuan">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>s x s =</p>
+        <div id="console">
+          <p id="hasilp">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Luas Segitiga</h2>
+      <button id="mulailuassegitiga" class="btnmore" onclick="bukaluassegitiga()">⋁</button>
+      <button id="tutupluassegitiga" class="btnmore" onclick="tutupluassegitiga()">⋀</button>
+    </div>
+    <div class="hitung" id="luassegitiga">
+      <div class="hitung1">
+        <p>Alas :</p>
+      <div class="hitung2">
+        <input type="number" id="alassegitiga" placeholder="Masukan nilai alas (a)">
+        <div id="console">
+        <p id="consoleSatuan2">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Tinggi :</p>
+      <div class="hitung2">
+        <input type="number" id="tinggisegitiga" placeholder="Masukan nilai tinggi (t)">
+        <div id="console">
+        <p id="consoleSatuan3">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>(a x t) : 2 =</p>
+        <div id="console">
+          <p id="hasilluassegitiga">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Luas Persegi Panjang</h2>
+      <button id="mulaipp" class="btnmore" onclick="bukapersegipanjang()">⋁</button>
+      <button id="tutuppp" class="btnmore" onclick="tutuppersegipanjang()">⋀</button>
+    </div>
+    <div class="hitung" id="persegipanjang">
+      <div class="hitung1">
+        <p>Panjang :</p>
+      <div class="hitung2">
+      <input type="number" id="panjang" placeholder="Masukan nilai panjang (p)">
+      <div id="console">
+        <p id="consoleSatuan4">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Lebar :</p>
+      <div class="hitung2">
+      <input type="number" id="lebar" placeholder="Masukan nilai lebar (l)">
+      <div id="console">
+        <p id="consoleSatuan5">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>p x l =</p>
+        <div id="console">
+          <p id="hasilpp">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Luas Lingkaran</h2>
+      <button id="mulaiLuasLing" class="btnmore" onclick="bukaLuasLing()">⋁</button>
+      <button id="tutupLuasLing" class="btnmore" onclick="tutupLuasLing()">⋀</button>
+    </div>
+    <div class="hitung" id="luasLingkaran">
+      <div class="ukuranPhi">
+        <p>Nilai π : </p>
+        <select name="ukuranPhi" id="ukuranPhi" class="pilihanPhi">
+          <option value="duapertuju">22/7</option>
+          <option value="tigakomaempat">3,14159</option>
+          <option value="tigakoma">3,14</option>
+        </select>
+      </div>
+      <div class="hitung1">
+        <p>Jari-jari :</p>
+      <div class="hitung2">
+      <input type="number" id="jari1" placeholder="Masukan nilai jari-jari (r)">
+      <div id="console">
+        <p id="consoleSatuan6">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>π x r² =</p>
+        <div id="console">
+          <p id="hasilLuasLingkaran">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Keliling Persegi</h2>
+      <button id="mulaiKelilingPersegi" class="btnmore" onclick="bukaKelilingPersegi()">⋁</button>
+      <button id="tutupKelilingPersegi" class="btnmore" onclick="tutupKelilingPersegi()">⋀</button>
+    </div>
+    <div class="hitung" id="kelilingPersegi">
+      <div class="hitung1">
+        <p>Sisi :</p>
+      <div class="hitung2">
+      <input type="number" id="sisi" placeholder="Masukan nilai sisi (s)">
+      <div id="console">
+        <p id="consoleSatuan7">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>4 x s =</p>
+        <div id="console">
+          <p id="hasilKelilingPersegi">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Keliling Persegi Panjang</h2>
+      <button id="mulaiKelilingPersegiPanjang" class="btnmore" onclick="bukaKelilingPersegiPanjang()">⋁</button>
+      <button id="tutupKelilingPersegiPanjang" class="btnmore" onclick="tutupKelilingPersegiPanjang()">⋀</button>
+    </div>
+    <div class="hitung" id="kelilingPersegiPanjang">
+      <div class="hitung1">
+        <p>Panjang :</p>
+      <div class="hitung2">
+      <input type="number" id="panjang1" placeholder="Masukan nilai panjang (p)">
+      <div id="console">
+        <p id="consoleSatuan8">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Lebar :</p>
+      <div class="hitung2">
+      <input type="number" id="lebar1" placeholder="Masukan nilai lebar (l)">
+      <div id="console">
+        <p id="consoleSatuan9">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>2 x (p + l) =</p>
+        <div id="console">
+          <p id="hasilKelilingPersegiPanjang">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Keliling Segitiga</h2>
+      <button id="mulaiKelilingSegitiga" class="btnmore" onclick="bukaKelilingSegitiga()">⋁</button>
+      <button id="tutupKelilingSegitiga" class="btnmore" onclick="tutupKelilingSegitiga()">⋀</button>
+    </div>
+    <div class="hitung" id="kelilingSegitiga">
+      <div class="hitung1">
+        <p>Sisi A :</p>
+      <div class="hitung2">
+      <input type="number" id="sisiA" placeholder="Masukan nilai sisi A">
+      <div id="console">
+        <p id="consoleSatuan17">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Sisi B :</p>
+      <div class="hitung2">
+      <input type="number" id="sisiB" placeholder="Masukan nilai sisi B">
+      <div id="console">
+        <p id="consoleSatuan18">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Sisi C :</p>
+      <div class="hitung2">
+      <input type="number" id="sisiC" placeholder="Masukan nilai sisi C">
+      <div id="console">
+        <p id="consoleSatuan19">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>a + b + c =</p>
+        <div id="console">
+          <p id="hasilKelilingSegitiga">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Keliling Lingkaran</h2>
+      <button id="mulaiKelilingLingkaran" class="btnmore" onclick="bukaKelilingLingkaran()">⋁</button>
+      <button id="tutupKelilingLingkaran" class="btnmore" onclick="tutupKelilingLingkaran()">⋀</button>
+    </div>
+    <div class="hitung" id="kelilingLingkaran">
+            <div class="ukuranPhi">
+        <p>Nilai π : </p>
+        <select name="ukuranPhi" id="ukuranPhi2" class="pilihanPhi">
+          <option value="duatuju">22/7</option>
+          <option value="tigaempat">3,14159</option>
+          <option value="tigakom">3,14</option>
+        </select>
+      </div>
+      <div class="hitung1">
+        <p>Jari-jari :</p>
+      <div class="hitung2">
+      <input type="number" id="jari3" placeholder="Masukan nilai jari-jari (r)">
+      <div id="console">
+        <p id="consoleSatuan11">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>2 x π x r =</p>
+        <div id="console">
+          <p id="hasilKelilingLingkaran">-</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Volume Kubus</h2>
+      <button id="mulaik" class="btnmore" onclick="bukakubus()">⋁</button>
+      <button id="tutupk" class="btnmore" onclick="tutupkubus()">⋀</button>
+    </div>
+    <div class="hitung" id="kubus">
+      <div class="hitung1">
+        <p>Sisi :</p>
+      <div class="hitung2">
+      <input type="number" id="sisi1" placeholder="Masukan nilai sisi (s)">
+      <div id="console">
+        <p id="consoleSatuan10">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>s x s x s =</p>
+        <div id="console">
+          <p id="hasilk"></p>
+          </div>
+         </div>
+        </div>
+      
+    <div class="card">
+      <h2>Volume Balok</h2>
+      <button id="mulaibalok" class="btnmore" onclick="bukabalok()">⋁</button>
+      <button id="tutupbalok" class="btnmore" onclick="tutupbalok()">⋀</button>
+    </div>
+    <div class="hitung" id="balok">
+      <div class="hitung1">
+        <p>Panjang :</p>
+      <div class="hitung2">
+      <input type="number" id="panjangbalok" placeholder="Masukan nilai panjang (p)">
+      <div id="console">
+        <p id="consoleSatuan13">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Lebar :</p>
+      <div class="hitung2">
+      <input type="number" id="lebarbalok" placeholder="Masukan nilai lebar (l)">
+      <div id="console">
+        <p id="consoleSatuan14">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Tinggi :</p>
+      <div class="hitung2">
+      <input type="number" id="tinggibalok" placeholder="Masukan nilai tinggi (t)">
+      <div id="console">
+        <p id="consoleSatuan15">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>p x l x t =</p>
+        <div id="console">
+          <p id="hasilbalok"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Volume Bola</h2>
+      <button id="mulaibola" class="btnmore" onclick="bukabola()">⋁</button>
+      <button id="tutupbola" class="btnmore" onclick="tutupbola()">⋀</button>
+    </div>
+    <div class="hitung" id="bola">
+      <div class="ukuranPhi">
+        <p>Nilai π : </p>
+        <select name="ukuranPhi" id="ukuranPhi1" class="pilihanPhi">
+          <option value="duatuju">22/7</option>
+          <option value="tigaempat">3,14159</option>
+          <option value="tigakom">3,14</option>
+        </select>
+      </div>
+      <div class="hitung1">
+        <p>Jari-jari :</p>
+      <div class="hitung2">
+      <input type="number" id="jari2" placeholder="Masukan nilai jari² (r)">
+      <div id="console">
+        <p id="consoleSatuan16">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>(4/3)π x r³</p>
+        <div id="console">
+          <p id="hasilbola"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Volume Tabung</h2>
+      <button id="mulaiTabung" class="btnmore" onclick="bukaTabung()">⋁</button>
+      <button id="tutupTabung" class="btnmore" onclick="tutupTabung()">⋀</button>
+    </div>
+    <div class="hitung" id="tabung">
+      <div class="ukuranPhi">
+        <p>Nilai π : </p>
+        <select name="ukuranPhi" id="ukuranPhi3" class="pilihanPhi">
+          <option value="duatuju">22/7</option>
+          <option value="tigaempat">3,14159</option>
+          <option value="tigakom">3,14</option>
+        </select>
+      </div>
+      <div class="hitung1">
+        <p>Jari² alas :</p>
+      <div class="hitung2">
+      <input type="number" id="jari4" placeholder="Masukan nilai jari² alas (r)">
+      <div id="console">
+        <p id="consoleSatuan12">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hitung1">
+        <p>Tinggi :</p>
+      <div class="hitung2">
+      <input type="number" id="tinggi" placeholder="Masukan nilai tinggi tabung (t)">
+      <div id="console">
+        <p id="consoleSatuan20">-</p>
+      </div>
+      </div>
+      </div>
+      <div class="hasil">
+        <p>π x r² x t =</p>
+        <div id="console">
+          <p id="hasilTabung"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Akar Kuadrat</h2>
+      <button id="mulaiAkar" class="btnmore" onclick="bukaAkar()">⋁</button>
+      <button id="tutupAkar" class="btnmore" onclick="tutupAkar()">⋀</button>
+    </div>
+    <div class="hitung" id="akar">
+      <div class="hitung1">
+        <p>Akar dari :</p>
+      <div class="hitung2">
+      <input type="number" id="angkaAkar" placeholder="Masukan angka">
+      </div>
+      </div>
+      <div class="hasil">
+        <p>Adalah :</p>
+        <div id="console">
+          <p id="hasilKuadrat"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Hitung Pecahan</h2>
+      <button id="mulaiPecahan" class="btnmore" onclick="bukaPecahan()">⋁</button>
+      <button id="tutupPecahan" class="btnmore" onclick="tutupPecahan()">⋀</button>
+    </div>
+    <div class="hitung" id="pecahan">
+       <div class="ukuranPhi">
+        <p>Tipe Hitungan : </p>
+        <select name="ukuranPhi" id="tipePecahan" class="pilihanPhi">
+          <option value="+">Penjumlahan (+)</option>
+          <option value="-">Pengurangan (-)</option>
+          <option value="÷">Pembagian (÷)</option>
+          <option value="x">Perkalian (x)</option>
+        </select>
+      </div>
+      <div class="hitung1 pecahan">
+      <div class="hitung2 pecahan">
+      <input type="number" id="angkaPecahan1" placeholder="a">
+      <h1>/</h1>
+      <input type="number" id="angkaPecahan2" placeholder="b">
+      <div id="console"><p id="consolTipePecahan"></p></div>
+      <input type="number" id="angkaPecahan3" placeholder="a">
+      <h1>/</h1>
+      <input type="number" id="angkaPecahan4" placeholder="b">
+      </div>
+      </div>
+      <div class="hasil">
+        <p>Hasil :</p>
+        <div id="console">
+          <p id="hasilPecahan"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="laptop">
+      <div class="card">
+        <h1>MultiMath tidak untuk perangkat layar lebar !!</h1>
+        <p>Lihat di perangkat yang memiliki layar kecil</p>
+      </div>
+    </div>
+  <p class="copyright">© 2026 MultiMath. All Rights Reserved.</p>
+    </div>
+  <br>
+</body>
+</html>
+</html>
